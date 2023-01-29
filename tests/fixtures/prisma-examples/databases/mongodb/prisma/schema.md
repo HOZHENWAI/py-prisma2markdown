@@ -1,0 +1,23 @@
+# Prisma schema
+```mermaid
+erDiagram
+
+User {
+    id String
+    createAt DateTime
+    firstName String
+    lastName String
+    email String
+}
+
+Post {
+    id String
+    createdAt DateTime
+    title String
+    body String
+    views Integer
+    authorId String
+}
+
+Post }o..o| User : "Post.authorId : User.id"
+```
