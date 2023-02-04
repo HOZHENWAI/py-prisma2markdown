@@ -1,4 +1,4 @@
-# Prisma schema
+#Prisma schema
 ```mermaid
 erDiagram
 
@@ -15,7 +15,7 @@ Post {
     createdAt DateTime
     title String
     body String
-    views Integer
+    views Int
     authorId String
 }
 

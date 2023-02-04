@@ -3,31 +3,31 @@
 erDiagram
 
 User {
-    id Integer
+    id Int
     createdAt DateTime
     email String
     name String
 }
 
 Post {
-    id Integer
+    id Int
     createdAt DateTime
     title String
     content String
     published Boolean
-    authorId Integer
+    authorId Int
 }
 
 Comment {
-    id Integer
+    id Int
     createdAt DateTime
     comment String
     writtenById Integer
-    postId Integer
+    postId Int
 }
 
 Tag {
-    id Integer
+    id Int
     tag String
 }
 
