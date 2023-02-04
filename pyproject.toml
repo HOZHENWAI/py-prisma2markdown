@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prisma2markdown"
+version = "1.0.0"
+authors = [{name='HO Olivier', email="hozhenwai@gmail.com"}]
+description = "TODO"
+readme = "README.md"
+dependencies = []
+requires-python = ">=3.10"
+
+[project.scripts]
+prisma2markdown = "src.cli:cli"
