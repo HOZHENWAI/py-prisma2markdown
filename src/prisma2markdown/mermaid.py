@@ -80,6 +80,8 @@ class MermaidBuilder:
         elif tokens[1].endswith("?"):
             attribute_type = tokens[1][:-1]
             optional = True
+        elif tokens[1].startswith("@@"):
+            return
         else:
             attribute_type = tokens[1]
         self.current_model.add_attribute(tokens[0], attribute_type, optional)
