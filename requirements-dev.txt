@@ -1,2 +1,7 @@
 # linter
 pylint~=2.15
+# test
+pytest
+pytest-cov
+# code formatter
+black

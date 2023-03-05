@@ -31,8 +31,8 @@ Tag {
     tag String
 }
 
-Post }o--|| User : "Post.authorId : User.id"
-Comment }o--|| User : "Comment.writtenBy : User.id"
-Comment }o--|| Post : "Comment.postId : Post.id"
+Post }o--|| User : "Post : User"
+Comment }o--|| User : "Comment : User"
+Comment }o--|| Post : "Comment : Post"
 Post }o--o{ Tag : "TagToPost"
 ```

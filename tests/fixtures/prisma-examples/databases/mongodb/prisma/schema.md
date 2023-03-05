@@ -19,5 +19,5 @@ Post {
     authorId String
 }
 
-Post }o..o| User : "Post.authorId : User.id"
+Post }o..o| User : "Post : User"
 ```
