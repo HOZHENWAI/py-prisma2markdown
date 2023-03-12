@@ -1,5 +1,6 @@
 """Command line interface for prisma2markdown."""
 import os
+from pathlib import Path
 
 import click
 
@@ -8,11 +9,11 @@ from .workflow import update_markdown, create_markdown
 
 @click.group()
 def prisma2mermaid():
-    """Main entry group"""
+    pass
 
 
 @click.command()
-@click.option("--prisma-target", help="Path to the prisma schema.")
+@click.argument("prisma-target", help="Path to the prisma schema.")
 @click.option(
     "--markdown-target",
     help="Path to markdown to be updated."
@@ -21,8 +22,10 @@ def prisma2mermaid():
 @click.option(
     "--force", is_flag=True, help="Set the if you wish to forced overwrite of markdown target."
 )
-def generate(prisma_target: os.PathLike, markdown_target: os.PathLike, force: bool):
+def generate(prisma_target: os.PathLike,force: bool, markdown_target: os.PathLike = None):
     """Generate a mermaid schema from a prisma schema."""
+    if markdown_target is None:
+        markdown_target = Path(prisma_target).with_suffix("md")
     create_markdown(prisma_target, markdown_target, force)
 
 
