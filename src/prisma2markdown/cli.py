@@ -25,7 +25,7 @@ def prisma2mermaid():
 def generate(prisma_target: os.PathLike,force: bool, markdown_target: os.PathLike = None):
     """Generate a mermaid schema from a prisma schema."""
     if markdown_target is None:
-        markdown_target = Path(prisma_target).with_suffix("md")
+        markdown_target = Path(prisma_target).with_suffix(".md")
     create_markdown(prisma_target, markdown_target, force)
 
 
