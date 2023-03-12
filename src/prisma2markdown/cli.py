@@ -13,7 +13,7 @@ def prisma2mermaid():
 
 
 @click.command()
-@click.argument("prisma-target", help="Path to the prisma schema.")
+@click.argument("prisma-target")
 @click.option(
     "--markdown-target",
     help="Path to markdown to be updated."
@@ -30,7 +30,7 @@ def generate(prisma_target: os.PathLike,force: bool, markdown_target: os.PathLik
 
 
 @click.command()
-@click.option("--markdown-target", help="Path to markdown to be updated.")
+@click.argument("--markdown-target")
 @click.option(
     "--mock",
     is_flag=True,

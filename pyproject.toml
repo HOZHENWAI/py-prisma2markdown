@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "prisma2markdown"
-version = "1.0.3"
+version = "1.0.4"
 authors = [{name='HO Olivier', email="hozhenwai@gmail.com"}]
 description = "A pure python mermaid generator for prisma schema."
 readme = "README.md"
