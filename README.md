@@ -1,4 +1,4 @@
-# Prisma2Markdown
+# Prisma2Markdown (deprecated) - Use `prisma-erd-generator` instead
 
 Prisma2Markdown or more is a pure python package that aim to facilitate 
 prisma database visualization using mermaid.
